@@ -29,228 +29,49 @@
     </header>
     <section class="text-gray-700 body-font">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/F00/F00"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Primary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Red
-                </h2>
-                <p class="mt-1">$16.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
+        <div id="products-grid" class="flex flex-wrap -m-4"></div>
+      </div>
+      <template>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <div class="block relative h-48 rounded overflow-hidden">
+            <img
+              alt="ecommerce"
+              class="object-cover object-center w-full h-full block"
+              data-product-color
+              src="https://dummyimage.com/420x260/F00/F00"
+            />
           </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/FF0/FF0"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Primary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Yellow
-                </h2>
-                <p class="mt-1">$21.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
+          <div class="mt-4 flex items-end justify-between">
+            <div>
+              <h3
+                data-product-category
+                class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
               >
-                Add To Cart
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/00F/00F"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Primary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Blue
-                </h2>
-                <p class="mt-1">$12.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
+                Primary Color
+              </h3>
+              <h2
+                class="text-gray-900 title-font text-lg font-medium"
+                data-product-name
               >
-                Add To Cart
-              </button>
+                Red
+              </h2>
+              <p class="mt-1" data-product-price>$16.00</p>
             </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/F60/F60"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Secondary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Orange
-                </h2>
-                <p class="mt-1">$18.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/0F0/0F0"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Secondary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Green
-                </h2>
-                <p class="mt-1">$16.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/60F/60F"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Secondary Color
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Purple
-                </h2>
-                <p class="mt-1">$21.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/AAA/AAA"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Grayscale
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Light Gray
-                </h2>
-                <p class="mt-1">$12.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <div class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260/333/333"
-              />
-            </div>
-            <div class="mt-4 flex items-end justify-between">
-              <div>
-                <h3
-                  class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"
-                >
-                  Grayscale
-                </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
-                  Dark Gray
-                </h2>
-                <p class="mt-1">$18.00</p>
-              </div>
-              <button
-                class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
-              >
-                Add To Cart
-              </button>
-            </div>
+            <button
+              data-product-id
+              class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700"
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
-      </div>
+      </template>
     </section>
     <section>
-      <div class="mb-4 top-0 right-0 mr-4 mt-20 fixed">
+      <div
+        id="cart-content"
+        class="mb-4 top-0 right-0 mr-4 mt-20 fixed invisible"
+      >
         <div
           style="max-height: calc(100vh - 6rem)"
           class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
@@ -307,6 +128,7 @@
         </div>
       </div>
       <button
+        id="cart-button"
         class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
       >
         <svg
