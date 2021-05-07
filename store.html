@@ -31,7 +31,7 @@
       <div class="container px-5 py-24 mx-auto">
         <div id="products-grid" class="flex flex-wrap -m-4"></div>
       </div>
-      <template>
+      <template id="product-template">
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <div class="block relative h-48 rounded overflow-hidden">
             <img
@@ -76,7 +76,7 @@
           style="max-height: calc(100vh - 6rem)"
           class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
         >
-          <div class="overflow-y-auto px-4 pt-4">
+          <div id="cart-items-grid" class="overflow-y-auto px-4 pt-4">
             <div class="mb-6">
               <div class="block relative h-24 rounded overflow-hidden">
                 <img
@@ -99,6 +99,40 @@
                 <div>$32.00</div>
               </div>
             </div>
+            <template id="cart-item-template">
+              <div class="mb-6">
+                <div class="block relative h-24 rounded overflow-hidden">
+                  <img
+                    alt="ecommerce"
+                    data-cart-item-color
+                    class="object-cover object-center w-full h-full block rounded"
+                    src="https://dummyimage.com/210x130/F00/F00"
+                  />
+                  <button
+                    data-remove-from-cart-button
+                    class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div class="mt-2 flex justify-between">
+                  <div class="flex items-center title-font">
+                    <h2
+                      data-cart-item-name
+                      class="text-gray-900 text-lg font-medium"
+                    >
+                      Red
+                    </h2>
+                    <span
+                      data-cart-item-multiplier
+                      class="text-gray-600 text-sm font-bold ml-1"
+                      >x2</span
+                    >
+                  </div>
+                  <div data-cart-item-price>$32.00</div>
+                </div>
+              </div>
+            </template>
             <div class="mb-6">
               <div class="block relative h-24 rounded overflow-hidden">
                 <img
