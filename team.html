@@ -195,6 +195,37 @@
       </div>
     </section>
     <section>
+      <template id="cart-item-template">
+        <div class="mb-6" data-cart-item-id>
+          <div class="block relative h-24 rounded overflow-hidden">
+            <img
+              alt="ecommerce"
+              data-cart-item-color
+              class="object-cover object-center w-full h-full block rounded"
+              src="https://dummyimage.com/210x130/F00/F00"
+            />
+            <button
+              data-remove-from-cart-button
+              class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="mt-2 flex justify-between">
+            <div class="flex items-center title-font">
+              <h2 data-cart-item-name class="text-gray-900 text-lg font-medium">
+                Red
+              </h2>
+              <span
+                data-cart-item-multiplier
+                class="text-gray-600 text-sm font-bold ml-1 invisible"
+                >x2</span
+              >
+            </div>
+            <div data-cart-item-price>$32.00</div>
+          </div>
+        </div>
+      </template>
       <div
         id="cart-content"
         class="mb-4 top-0 right-0 mr-4 mt-20 fixed invisible"
@@ -203,60 +234,16 @@
           style="max-height: calc(100vh - 6rem)"
           class="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
         >
-          <div class="overflow-y-auto px-4 pt-4">
-            <div class="mb-6">
-              <div class="block relative h-24 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block rounded"
-                  src="https://dummyimage.com/210x130/F00/F00"
-                />
-                <button
-                  data-remove-from-cart-button
-                  class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center"
-                >
-                  &times;
-                </button>
-              </div>
-              <div class="mt-2 flex justify-between">
-                <div class="flex items-center title-font">
-                  <h2 class="text-gray-900 text-lg font-medium">Red</h2>
-                  <span class="text-gray-600 text-sm font-bold ml-1">x2</span>
-                </div>
-                <div>$32.00</div>
-              </div>
-            </div>
-            <div class="mb-6">
-              <div class="block relative h-24 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  class="object-cover object-center w-full h-full block rounded"
-                  src="https://dummyimage.com/210x130/00F/00F"
-                />
-                <button
-                  data-remove-from-cart-button
-                  class="absolute top-0 right-0 bg-black rounded-tr text-white w-6 h-6 text-lg flex justify-center items-center"
-                >
-                  &times;
-                </button>
-              </div>
-              <div class="mt-2 flex justify-between">
-                <div class="flex items-center title-font">
-                  <h2 class="text-gray-900 text-lg font-medium">Blue</h2>
-                </div>
-                <div>$12.00</div>
-              </div>
-            </div>
-          </div>
+          <div id="cart-items-grid" class="overflow-y-auto px-4 pt-4"></div>
           <div class="flex justify-between items-end border-t p-4">
             <span class="font-bold text-lg uppercase">Total</span>
-            <span class="font-bold">$44.00</span>
+            <span id="cart-total" class="font-bold"></span>
           </div>
         </div>
       </div>
       <button
         id="cart-button"
-        class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
+        class="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700 invisible"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -272,10 +259,9 @@
           />
         </svg>
         <div
+          id="cart-badge"
           class="bg-red-500 rounded-full text-xs absolute w-6 h-6 flex justify-center items-center right-0 bottom-0 transform translate-x-2 translate-y-2"
-        >
-          2
-        </div>
+        ></div>
       </button>
     </section>
   </body>
