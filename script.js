@@ -122,17 +122,11 @@ document.addEventListener("click", (e) => {
 });
 
 // Send a request and fetch data from JSON file then send array to renderProducts()
-function fetchJSONData(jsonLink) {
-  let request = new XMLHttpRequest();
-  request.open("GET", jsonLink);
-  request.responseType = "json";
-  request.send();
-
-  request.onload = function () {
-    const products = request.response;
-    returnProductArray(products);
-    renderProducts(products);
-  };
+async function fetchJSONData(jsonLink) {
+  const response = await fetch(jsonLink);
+  const products = await response.json();
+  returnProductArray(products);
+  renderProducts(products);
 }
 // Grab the request response and push it into an array
 function returnProductArray(requestResponse) {
